@@ -1,0 +1,11 @@
+Abstract
+========
+The proposal of this project is to create a set of libraries for different programming languages that allows developers to easily create and validate XAdES 1.3.2 signatures
+
+Dependencies
+============
+Those libraries are built over Aleksey's libxmlsec. 
+
+Status
+======
+Still in a very early stage...step by step :)
