@@ -1,0 +1,108 @@
+<?xml version="1.0"?>
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="Signature">
+  <SignedInfo>
+    <CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"/>
+    <SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"/> 
+    <Reference URI="#SignedProperties" Type="http://uri.etsi.org/01903#SignedProperties">
+      <DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
+      <DigestValue>2yG6G7qC8iU4LQvZZvwXZlYr1NQ=</DigestValue>
+    </Reference> 		<Reference URI="#Contract2">
+		      <DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
+ 		      <DigestValue>H4E/QYhb9YPx6X7rMq3EoP7hemw=</DigestValue>
+		</Reference>
+		<Reference URI="#Contract3">
+		      <DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
+ 		      <DigestValue>6Yrp6DkMTJbk78EmaC3QthDrI5Y=</DigestValue>
+		</Reference>
+		<Reference URI="#Contract1">
+		      <DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
+ 		      <DigestValue>3e7kdQbyQaoSWwBVJLUi65kQE3s=</DigestValue>
+		</Reference>
+
+  </SignedInfo>
+  <SignatureValue>DDzYhJDvAwQM6b2nYk/pE3r16XNF70XNZoFVouEBRwpPfftqNrncXwiNWtF1D6hu
+yrOvU/FUviraYz+HnzDKeIFJ19cUGedViVZDpFLbKnfkVekcktt95FKJZAnKPTmD
+0UmXg+XsVyEntt/gBzL/UgKygJ2exqm6/BFsgqcLzK4=</SignatureValue>
+  <KeyInfo>
+      <X509Data>
+<X509Certificate>MIIIDzCCBvegAwIBAgIJALsAAAAAAAABMA0GCSqGSIb3DQEBBQUAMIHgMQswCQYD
+VQQGEwJFUzEuMCwGCSqGSIb3DQEJARYfYWNfY2FtZXJmaXJtYV9jY0BjYW1lcmZp
+cm1hLmNvbTFDMEEGA1UEBxM6TWFkcmlkIChzZWUgY3VycmVudCBhZGRyZXNzIGF0
+IHd3dy5jYW1lcmZpcm1hLmNvbS9hZGRyZXNzKTESMBAGA1UEBRMJQTgyNzQzMjg3
+MRkwFwYDVQQKExBBQyBDYW1lcmZpcm1hIFNBMS0wKwYDVQQDEyRBQyBDYW1lcmZp
+cm1hIENlcnRpZmljYWRvcyBDYW1lcmFsZXMwHhcNMDcxMjEwMTUwMjA0WhcNMTIx
+MjA4MTUwMjA0WjCCAVsxCzAJBgNVBAYTAkVTMSwwKgYDVQQDFCNDZXJ0aWZpY2Fk
+byBQcnVlYmFzIFNvZnR3YXJlIFbhbGlkbzEiMCAGCSqGSIb3DQEJARYTaW5mb0Bj
+YW1lcmZpcm1hLmNvbTESMBAGA1UEBRMJMTIzNDU2NzhaMRgwFgYDVQQEFA9Tb2Z0
+d2FyZSBW4WxpZG8xHDAaBgNVBCoTE0NlcnRpZmljYWRvIFBydWViYXMxGzAZBgor
+BgEEAYGHLh4DEwtFU0E5OTk5OTk5OTEWMBQGA1UEChMNQUMgQ2FtZXJmaXJtYTEV
+MBMGA1UECxMMRGVwYXJ0YW1lbnRvMQ4wDAYDVQQMEwVDYXJnbzFSMFAGA1UEDRNJ
+Q2hhbWJlcnMgb2YgQ29tbWVyY2UgUXVhbGlmaWVkIENlcnRpZmljYXRlOiBOYXR1
+cmFsIFBlcnNvbiBDQU0tUEYtU1ctS1BTQzCBnzANBgkqhkiG9w0BAQEFAAOBjQAw
+gYkCgYEAn3J774hSvM0Iu4l1aXZsmd2L86fQIBTp3CvBFf0fPlrbQWyn6CAExPDz
+WdVrMPrsue36sGCjeuwCvBDaC/VoFjVQF4Zm4y0cFaRN191zuCTl1RDnN3UxEilv
+h4V5vZGOK0/A4JcDKuvzw0OKlS7/qEU6Z6aU/sX6MYV578R6Eg8CAwEAAaOCA9Aw
+ggPMMAwGA1UdEwEB/wQCMAAwDgYDVR0PAQH/BAQDAgO4MCkGA1UdJQQiMCAGCCsG
+AQUFBwMCBggrBgEFBQcDBAYKKwYBBAGCNxQCAjARBglghkgBhvhCAQEEBAMCBaAw
+QgYJYIZIAYb4QgEDBDUWM1VSSTpodHRwOi8vY3JsLmNhbWVyZmlybWEuY29tL2Fj
+X2NhbWVyZmlybWFfY2MuY2dpPzBGBglghkgBhvhCAQgEORY3VVJJOmh0dHA6Ly9j
+cHMuY2FtZXJmaXJtYS5jb20vY3BzL2FjX2NhbWVyZmlybWFfY2MuaHRtbDAxBglg
+hkgBhvhCAQ0EJBYiQ0VSVElGSUNBRE8gQ1VBTElGSUNBRE8gLSBSQTogQ0M5OTAd
+BgNVHQ4EFgQUE1uUj4A0WxHykYacpCrRxvDtQnQweAYIKwYBBQUHAQEEbDBqMEAG
+CCsGAQUFBzAChjRodHRwOi8vd3d3LmNhbWVyZmlybWEuY29tL2NlcnRzL2FjX2Nh
+bWVyZmlybWFfY2MuY3J0MCYGCCsGAQUFBzABhhpodHRwOi8vb2NzcC5jYW1lcmZp
+cm1hLmNvbTCBqwYDVR0jBIGjMIGggBS2H06dHGiRLjdyYOFGj1qlKjExuaGBhKSB
+gTB/MQswCQYDVQQGEwJFVTEnMCUGA1UEChMeQUMgQ2FtZXJmaXJtYSBTQSBDSUYg
+QTgyNzQzMjg3MSMwIQYDVQQLExpodHRwOi8vd3d3LmNoYW1iZXJzaWduLm9yZzEi
+MCAGA1UEAxMZQ2hhbWJlcnMgb2YgQ29tbWVyY2UgUm9vdIIBBTB2BgNVHR8EbzBt
+MDSgMqAwhi5odHRwOi8vY3JsLmNhbWVyZmlybWEuY29tL2FjX2NhbWVyZmlybWFf
+Y2MuY3JsMDWgM6Axhi9odHRwOi8vY3JsMS5jYW1lcmZpcm1hLmNvbS9hY19jYW1l
+cmZpcm1hX2NjLmNybDAqBgNVHRIEIzAhgR9hY19jYW1lcmZpcm1hX2NjQGNhbWVy
+ZmlybWEuY29tMIGSBgNVHSAEgYowgYcwgYQGDSsGAQQBgYcuCgkCAQEwczA/Bggr
+BgEFBQcCARYzaHR0cDovL2Nwcy5jYW1lcmZpcm1hLmNvbS9jcHMvYWNfY2FtZXJm
+aXJtYV9jYy5odG1sMDAGCCsGAQUFBwICMCQaIkNFUlRJRklDQURPIENVQUxJRklD
+QURPIC0gUkE6IENDOTkwLwYIKwYBBQUHAQMEIzAhMAgGBgQAjkYBATAVBgYEAI5G
+AQIwCxMDRVVSAgEAAgEBMA0GCSqGSIb3DQEBBQUAA4IBAQB+UgF+t54k2gK8Ehe1
+tz6ivqxB0Gp9GpFtw0B/j1HGyP0OlqtRrPqSS2oLJfyzUlSlYcLcWqzPRqu+5diE
+xaVcUG8ft6EcjEF614EcYhJjA5jGMSpU7S+dG+e/tO+aJf6bd/sfp1nm+TnPh0Tb
+HJPv+gTaeUlH45AGHhTakluf9R8W2nx/HXOF5qD+p/KaV0+nfDh1KPQmPR5ima/A
+JW4HvvloHdmDAPgY4EUXjuqmmsP0wXhmvVU4eXJTnhMcjlNVZoix31BYB1OhsFeo
+WsDeHbki7CZYnUST18/cW4s+MGeZ+ajAp0IJGURn9IfRFSNRREqKglHDVN28kes5
+1J0C</X509Certificate>
+</X509Data>
+  </KeyInfo>
+  <Object><xades:QualifyingProperties xmlns:xades="http://uri.etsi.org/01903/v1.3.2#" Target="#Signature">
+	<xades:SignedProperties Id="SignedProperties">
+		<xades:SignedSignatureProperties>
+			<xades:SigningTime>2010-05-12T11:07:59Z</xades:SigningTime>
+			<xades:SigningCertificate>
+				<xades:Cert>
+					<xades:CertDigest>
+						<DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
+						<DigestValue>jFdkE33pJa7lmBO1T7Wjtn1nyAE=</DigestValue>
+					</xades:CertDigest>
+					<xades:IssuerSerial>
+						<X509IssuerName>/C=ES/emailAddress=ac_camerfirma_cc@camerfirma.com/L=Madrid (see current address at www.camerfirma.com/address)/serialNumber=A82743287/O=AC Camerfirma SA/CN=AC Camerfirma Certificados Camerales</X509IssuerName>
+						<X509SerialNumber>13474770085092524033</X509SerialNumber>
+					</xades:IssuerSerial>
+				</xades:Cert>
+			</xades:SigningCertificate>
+			<xades:SignatureProductionPlace>
+				<xades:City>Barcelona</xades:City>
+				<xades:CountryName>SP</xades:CountryName>
+				</xades:SignatureProductionPlace>
+		</xades:SignedSignatureProperties>
+		<xades:SignedDataObjectProperties>
+			<xades:CommitmentTypeIndication>
+				<xades:CommitmentTypeId>
+					<xades:Identifier>http://github.com/tractis/xades_library/commitments#signContract</xades:Identifier>
+				</xades:CommitmentTypeId>
+			</xades:CommitmentTypeIndication></xades:SignedDataObjectProperties>
+	</xades:SignedProperties>
+	<xades:UnsignedProperties/>
+</xades:QualifyingProperties>
+</Object><Object Id="Contract2"><b/></Object>
+<Object Id="Contract3"><c/></Object>
+<Object Id="Contract1"><a/></Object>
+
+</Signature>

@@ -1,0 +1,18 @@
+begin
+  require 'rake/gempackagetask'
+  require 'rake/extensiontask'
+rescue LoadError
+end
+require 'rake/clean'
+
+
+desc "Testing library XAdES pure ruby"
+task :test_pure => :clean do
+  ENV['JSON'] = 'pure'
+  ENV['RUBYOPT'] = "-Iext:lib #{ENV['RUBYOPT']}"
+  system "testrb #{Dir['tests/*.rb'] * ' '}"
+end
+
+desc "Testing library (pure ruby and extension)"
+task :test => [ :test_pure ]
+
