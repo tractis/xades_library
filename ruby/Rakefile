@@ -25,7 +25,14 @@ task :units do
     system cmdline
 end
 
+desc "Testing XMLdSIG library"
+task :test_deps do
+    puts "Running xmldsig tests"
+    cmdline = "cd deps;ruby runtests.rb"
+    system cmdline
+end
+
 
 desc "Testing library (pure ruby and extension)"
-task :test => [ :units ]
+task :test => [  :test_deps, :units ]
 
