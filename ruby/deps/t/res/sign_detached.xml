@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<greeting>
+<hello>foo</hello>
+<hello>bar</hello>
+<goodbye>foo</goodbye>
+<goodbye>bar</goodbye>
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#">
+<SignedInfo>
+<CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"/>
+<SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"/>
+<Reference URI="#xpointer(//hello)">
+<Transforms>
+<Transform Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"/>
+</Transforms>
+<DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
+<DigestValue>Go3BoRYzsF+DhIoO2ucttCA/Jko=</DigestValue>
+</Reference>
+</SignedInfo>
+<SignatureValue>ezUiqXDcY2K694lKw+/K1siNo31dUvFIVnix6xiN39dq85jcLC30cS/Tb8WYv17j
+FRS36Nd4aKnbKLpyDsIaP2+vzD5yt2YMESCNftASPleM8qCV89knZHt2yPOAhs72
+WlL10EpDHdzou2LauwuXbqjPUWjawhf2sC39jBdWamt4vhTQNK+mPQ89l5B30WrD
+VjpEunkG6vy82Hd1xUaVVYaPQwL2Seak0fuuNq0aMemHVcWZPI4nd+hY0Miz1Rs3
+VZ3+zqmYIBcdtdBYSfFvNWYYnVUGOhsh66wapm8N2kP2xOoKyUnnO0uOL5yJLalH
+8nHo21v7W6pUMX+nMCYa6A==</SignatureValue>
+</Signature></greeting>

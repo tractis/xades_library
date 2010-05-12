@@ -1,0 +1,19 @@
+Current status
+    + This is an alpha version, allows XAdES signature creation but verification is still pending
+
+Prerequisites
+    + You need to install xmldsig library. To do this go to deps and follow instructions on deps/README.ruby
+    + You'll need ruby openssl gem installed
+
+Testing that all works
+    + You can tests that xades works by executing rake test
+
+Current status
+    + XAdES 1.3.2 BES signatures could be created using a PKCS12 keystore
+    + Some basic interop with XAdES validators already performed
+
+Next steps
+    + Bundle this lib as a gem in order to be easily used by third apps
+    + Create signature validator
+    + Add support for other keystores (PKCS11, MSCAPI)
+    + More testing and interop

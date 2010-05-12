@@ -1,0 +1,6 @@
+This directory contains files from the TSIK test cases, for comparison
+with dsig output.
+
+The default xmlns in xpath_out.xml has been modified from "hello" to
+"/hello" because relative URIs are not allowed in namespaces.  The
+file was re-signed with our own keys.

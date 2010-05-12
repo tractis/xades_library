@@ -1,0 +1,19 @@
+<books Id="mybooks">
+  <book name="XML in a nutshell">
+  Small, nice, O'Reilly
+  </book>
+  <book name="Professional XML">
+  Big, not bad, Wrox
+  </book>
+<ds:Signature xmlns:ds="http://www.w3.org/2000/09/xmldsig#"><ds:SignedInfo><ds:CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"/><ds:SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"/><ds:Reference URI="#xpointer(/*)"><ds:Transforms><ds:Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/><ds:Transform Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"/></ds:Transforms><ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/><ds:DigestValue>3HsERFTYTb2/qEdnHmRcv2IGq9A=</ds:DigestValue></ds:Reference></ds:SignedInfo><ds:SignatureValue>Q+wRuV6o5Xk6QV8HX91r7GUwyl4jdLy7m7GNCldDpfey+qyc5j3GMlnPK70DsU5ooqG8O+nK
+882o0SCrYLFMoLShOW4bfhORk4R+dIoLt3zbLqu3slWFUj0PM/Xb80rpu/olCOmTv59Ptl6A
+u/QRAu9Ga0Dv3ed+nHeEsB4aP+4=</ds:SignatureValue><ds:KeyInfo><ds:X509Data><ds:X509Certificate>MIIB9zCCAWACAQAwDQYJKoZIhvcNAQEEBQAwRTELMAkGA1UEBhMCQVUxEzARBgNVBAgTClNv
+bWUtU3RhdGUxITAfBgNVBAoTGEludGVybmV0IFdpZGdpdHMgUHR5IEx0ZDAeFw0wMTA3MjYy
+MzE0MDlaFw0wMTA4MjUyMzE0MDlaMEUxCzAJBgNVBAYTAkFVMRMwEQYDVQQIEwpTb21lLVN0
+YXRlMSEwHwYDVQQKExhJbnRlcm5ldCBXaWRnaXRzIFB0eSBMdGQwgZ0wDQYJKoZIhvcNAQEB
+BQADgYsAMIGHAoGBALLxDmqaHwpMdUli9T/qBbUvQjZiYnb2+a5xAuqCvUZYeIOY5LGq+iSF
+8g81BP5Ef4EmWSGbqseLKY5PK6O3Y7cnLkR/LaVUtEjT6jQhjZgWrpoj02sHOO1uMrHgOhdj
+dDu9JtF4Djylsn3d8skWXnZZ2pxI7ZXMem6q1olwjbB7AgEDMA0GCSqGSIb3DQEBBAUAA4GB
+AH0Q/SVeO5fi1RAGkn0jvPjnL5QASeie5Z4u2DYkkpR1N4VOF0HoX1PNfFJbjzP4o/fs2bKs
+H0exibxF3OPfXM78EKcm02HJp/twHepYY+fAUkRB1HV36F8bBOFloyML3bkyQHekNwy1SzLN
+nC6+CFO8G2c7V33L/ef7R79nA6v3</ds:X509Certificate></ds:X509Data></ds:KeyInfo></ds:Signature></books>

@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<greeting>
+<hello>foo</hello>
+<hello>bar</hello>
+<goodbye>foo</goodbye>
+<goodbye>bar</goodbye>
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#">
+<SignedInfo>
+<CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"/>
+<SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#hmac-sha1"/>
+<Reference URI="">
+<Transforms>
+<Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/>
+<Transform Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"/>
+</Transforms>
+<DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
+<DigestValue>/6gSo8de1kQwW6sNa12r0juvWTU=</DigestValue>
+</Reference>
+</SignedInfo>
+<SignatureValue>nrzbSNhsrvAhpZKpM579m8krk1o=</SignatureValue>
+</Signature></greeting>

@@ -1,0 +1,12 @@
+<books Id="mybooks">
+  <book name="XML in a nutshell">
+  Small, nice, O'Reilly
+  </book>
+  <book name="Professional XML">
+  Big, not bad, Wrox
+  </book>
+<ds:Signature xmlns:ds="http://www.w3.org/2000/09/xmldsig#"><ds:SignedInfo><ds:CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"/><ds:SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"/><ds:Reference URI=""><ds:Transforms><ds:Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/><ds:Transform Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"/></ds:Transforms><ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/><ds:DigestValue>3HsERFTYTb2/qEdnHmRcv2IGq9A=</ds:DigestValue></ds:Reference></ds:SignedInfo><ds:SignatureValue>M4ZCDdhkZNxn8p11h9SyyxX/HXGofpRf7uW15TqyH14MaIapqQnP9EJBOC3EYElN+xcSgG3K
+GOTzkU2nLdd30UHdF5q0n4zxHsaJsHnUOkAEhWVzErQIEFI8JvWiWrcqTum3B8vMqK/Bynjq
+Wgnlnv9keGmLenP60+M2VixPtwo=</ds:SignatureValue><ds:KeyInfo><ds:KeyValue><ds:RSAKeyValue><ds:Modulus>oqi99By1VYo0aHrkKCNT4DkIgPL/SgahbeKdGhrbu3K2XG7arfD9tqIBIKMfrX4Gp90NJa85
+AV1yiNsEyvq+mUnMpNcKnLXLOjkTmMCqDYbbkehJlXPnaWLzve+mW0pJdPxtf3rbD4PS/cBQ
+IvtpjmrDAU8VsZKT8DN5Kyz+EZs=</ds:Modulus><ds:Exponent>AQAB</ds:Exponent></ds:RSAKeyValue></ds:KeyValue></ds:KeyInfo></ds:Signature></books>

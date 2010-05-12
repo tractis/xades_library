@@ -1,0 +1,6 @@
+This directory contains output files from the TSIK test cases, for
+comparison with dsig output.
+
+testMultipleSignatures.xml has been modified so that the second
+signature reference URI matches ours: 
+  /books/ds:Signature => /books/ds:Signature[1]

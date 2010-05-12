@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<doc xmlns="http://hello">
+ <elem Id="ID1">test</elem>
+<dsig:Signature xmlns:dsig="http://www.w3.org/2000/09/xmldsig#"><dsig:SignedInfo xmlns:dsig="http://www.w3.org/2000/09/xmldsig#"><dsig:CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"/><d:SignatureMethod xmlns:d="http://www.w3.org/2000/09/xmldsig#" Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"/><dsig:Reference xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" URI="#xpointer(/)"><dsig:Transforms xmlns:dsig="http://www.w3.org/2000/09/xmldsig#"><d:Transform xmlns:d="http://www.w3.org/2000/09/xmldsig#" Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/><dsig:Transform Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"/></dsig:Transforms><dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/><dsig:DigestValue>oQiux7mXgBG2EfRyHfRc49mRxvQ=</dsig:DigestValue></dsig:Reference></dsig:SignedInfo><dsig:SignatureValue xmlns:dsig="http://www.w3.org/2000/09/xmldsig#">tYpESZ0U+oY1Rp4qSsaHIZnpaylyB42iU+cobVpi8nwjJpEzDi3OfE62GP/+K/WJ
+BKtJWQbOJA/pEyEumc8big==</dsig:SignatureValue><dsig:KeyInfo xmlns:dsig="http://www.w3.org/2000/09/xmldsig#"><d:KeyValue xmlns:d="http://www.w3.org/2000/09/xmldsig#">
+<RSAKeyValue xmlns="http://www.w3.org/2000/09/xmldsig#">
+<Modulus>
+vPxF1aHAwJvYf3Am3qK+3nz2a0vbMPposBvNNP8HsGeiePoR1dSpeT/ZlExXb7v8
+hGdh2SHWcsSr/sET0Vit+w==
+</Modulus>
+<Exponent>
+AQAB
+</Exponent>
+</RSAKeyValue>
+</d:KeyValue></dsig:KeyInfo></dsig:Signature></doc>

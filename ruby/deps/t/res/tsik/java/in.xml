@@ -1,0 +1,6 @@
+<cert xmlns="http://example.com/cert">
+  <id>02442</id>
+  <o:owner xmlns:o="http://example.com/owner" style="lax">
+    Nomen Nescio
+  </o:owner>
+</cert>

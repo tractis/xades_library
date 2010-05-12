@@ -1,0 +1,1 @@
+V	070704211235Z		01	unknown	/C=CA/ST=British Columbia/O=Sxip/OU=Test Certificate/CN=test.sxip.com

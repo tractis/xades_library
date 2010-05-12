@@ -1,0 +1,16 @@
+<books Id="mybooks">
+  <ds:Signature xmlns:ds="http://www.w3.org/2000/09/xmldsig#"><ds:SignedInfo><ds:CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"/><ds:SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"/><ds:Reference URI="#xpointer(/books/book[2])"><ds:Transforms><ds:Transform Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"/></ds:Transforms><ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/><ds:DigestValue>IbGEuIeyQZsvVX1J7LzCXEHeEG8=</ds:DigestValue></ds:Reference></ds:SignedInfo><ds:SignatureValue>IIP7hLNqMJqaXVPIK7gv/gSUBJODHKh0H5kESI6yZjveeagxnZiUqW7ilDCrubt+Gv/15s3q
+2c23JFWlCA8fXrD/c8ZgXcycVl9w1thgzQjyspcSPQoY4RU/7bfyjG/AqEyzCvlzFoRr9lTp
+tHsCxia2Pr3tRD9qKFLrC49ZeNw=</ds:SignatureValue><ds:KeyInfo><ds:KeyValue><ds:RSAKeyValue><ds:Modulus>oqi99By1VYo0aHrkKCNT4DkIgPL/SgahbeKdGhrbu3K2XG7arfD9tqIBIKMfrX4Gp90NJa85
+AV1yiNsEyvq+mUnMpNcKnLXLOjkTmMCqDYbbkehJlXPnaWLzve+mW0pJdPxtf3rbD4PS/cBQ
+IvtpjmrDAU8VsZKT8DN5Kyz+EZs=</ds:Modulus><ds:Exponent>AQAB</ds:Exponent></ds:RSAKeyValue></ds:KeyValue></ds:KeyInfo></ds:Signature><book name="XML in a nutshell">
+  Small, nice, O'Reilly
+  </book>
+  <ds:Signature xmlns:ds="http://www.w3.org/2000/09/xmldsig#"><ds:SignedInfo><ds:CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"/><ds:SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"/><ds:Reference URI="#xmlns(ds=http://www.w3.org/2000/09/xmldsig#)xpointer(/books/ds:Signature[1])"><ds:Transforms><ds:Transform Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"/></ds:Transforms><ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/><ds:DigestValue>5WKGeeRj2UzXlLiNFv742AXqir8=</ds:DigestValue></ds:Reference></ds:SignedInfo><ds:SignatureValue>d8yZtFSlce1b9f8BF0UjB6U/k7RfpfBw9hj8kEp2uGshO994yfgZqJ/albeUVaHJFYLt/GGr
+bEwhHNh2VH7jOeDTCXhmcR2dMfoMiPdksU3SnrngZk50qj/VY+FpMjuar2qfksG/XC102+Ga
+IdhUxhcYddUSZcWhLV6Cq2ceB8Q=</ds:SignatureValue><ds:KeyInfo><ds:KeyValue><ds:RSAKeyValue><ds:Modulus>oqi99By1VYo0aHrkKCNT4DkIgPL/SgahbeKdGhrbu3K2XG7arfD9tqIBIKMfrX4Gp90NJa85
+AV1yiNsEyvq+mUnMpNcKnLXLOjkTmMCqDYbbkehJlXPnaWLzve+mW0pJdPxtf3rbD4PS/cBQ
+IvtpjmrDAU8VsZKT8DN5Kyz+EZs=</ds:Modulus><ds:Exponent>AQAB</ds:Exponent></ds:RSAKeyValue></ds:KeyValue></ds:KeyInfo></ds:Signature><book name="Professional XML">
+  Big, not bad, Wrox
+  </book>
+</books>

@@ -1,0 +1,7 @@
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+ <SOAP-ENV:Body Id="ID1">
+  <ns3:YahooUserOnline xmlns:ns3="urn:allesta-YahooUserPing">
+   <username xsi:type="xsd:string">fgx3prak</username>
+  </ns3:YahooUserOnline>
+ </SOAP-ENV:Body>
+</SOAP-ENV:Envelope>

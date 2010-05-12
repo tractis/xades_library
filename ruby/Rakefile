@@ -1,18 +1,31 @@
-begin
-  require 'rake/gempackagetask'
-  require 'rake/extensiontask'
-rescue LoadError
+require 'rubygems'
+require 'rake'
+
+def test_suite_cmdline
+  require 'find'
+  files = []
+  Find.find("test") do |f|
+    files << f if File.basename(f) =~ /.*test.*\.rb$/
+  end
+
+  Find.find("src") do |f|
+    files << f if File.basename(f) =~ /.*\.rb$/
+  end
+
+  puts "Files are #{files}"
+
+  cmdline = "ruby -w -I.:lib:ext:test -rtest/unit -e '%w[#{files.join(' ')}].each {|f| require f}'"
 end
-require 'rake/clean'
 
 
 desc "Testing library XAdES pure ruby"
-task :test_pure => :clean do
-  ENV['JSON'] = 'pure'
-  ENV['RUBYOPT'] = "-Iext:lib #{ENV['RUBYOPT']}"
-  system "testrb #{Dir['tests/*.rb'] * ' '}"
+task :units do
+    cmdline = "#{test_suite_cmdline}"
+    puts cmdline
+    system cmdline
 end
 
+
 desc "Testing library (pure ruby and extension)"
-task :test => [ :test_pure ]
+task :test => [ :units ]
 

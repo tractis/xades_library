@@ -16,10 +16,6 @@ class XadesTest < Test::Unit::TestCase
 		end
 	end
 
-	def provided_attributes_are_present_on_signature
-
-	end
-
 	private
 
 	def having_default_features

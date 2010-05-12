@@ -1,0 +1,61 @@
+XMLSig Interface Testing
+
+The XMLSig interface test cases are run for each of the language
+bindings.  These tests are intended to exercise the interface between
+the language and the native library, not to test the XMLSig library
+functionality.
+
+Each language's test suite should be run in the most appropriate test
+framework for that language:
+
+Python:	unittest
+Perl:	Test, use ExtUtils::testlib
+PHP:	Pear PHP::PHPUnit (http://pear.php.net/manual/en/package.php.phpunit.php)
+Ruby:	Test::Unit
+	
+Setup:
+
+- load private key (rsakey.pem)
+- load public key (rsapub.pem)
+- load HMAC key from string: "secret"
+- load certificate (rsacert.pem)
+- load XML document from string:
+  <greeting>
+  <hello>foo</hello>
+  <hello>bar</hello>
+  <goodbye>foo</goodbye>
+  <goodbye>bar</goodbye>
+  </greeting>
+
+Test Cases:
+
+Signed documents should be compared with the reference documents in
+this directory: 
+  sign_detached.xml
+  sign_detached_withkey.xml
+  sign_enveloped.xml
+  sign_enveloped_exc_c14n.xml
+  sign_enveloped_hmac.xml
+  sign_enveloped_withcert.xml
+  sign_enveloped_withkey.xml
+  sign_enveloping.xml
+  sign_enveloping_withkey.xml
+
+- sign document with enveloping signature (Signer::sign())
+- verify enveloping signature (Verifier::verify(public key))
+- check Verifier::verify() fails
+- sign document with enveloped signature (Signer::sign(XPath("//greeting"))
+- verify enveloped signature
+- sign document with detached signature (Signer::addReference(XPath("//hello")), 
+  Signer::sign(XPath("//greeting"))
+- verify detached signature
+- check first hello element is referenced (Verifier::isReferenced(XPath("//hello[1]"))
+- sign detached signature in place (Signer::signInPlace(XPath("//greeting")))
+- sign document with enveloping signature in place (Signer::signInPlace())
+- sign document and attach public key (Signer::Signer(doc, private key, public key),
+  Signer::sign(XPath("//greeting")))
+- sign document with exclusive canonicalizer
+- sign document and add certificate
+- extract certificate from signed document
+- load XML document from file
+- sign document with HMAC key

@@ -66,7 +66,7 @@ class XadesSignature
 		raise "Signed attributes cannot be blank" if attributes.nil? or attributes.empty?
 		#Attributes must include city and country where the signature have been produced 
 		[:city,:country].each do |att|
-			raise "Attribute #{att} must be specified as signed attribute" unless (attributes.keys.include?(att) and not attributes[att].nil?)
+			raise :missing_attr, "Attribute #{att} must be specified as signed attribute" unless (attributes.keys.include?(att) and not attributes[att].nil?)
 		end 
 		attributes
 	end

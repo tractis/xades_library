@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<greeting>
+<hello>foo</hello>
+<hello>bar</hello>
+<goodbye>foo</goodbye>
+<goodbye>bar</goodbye>
+</greeting>

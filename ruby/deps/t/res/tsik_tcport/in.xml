@@ -1,0 +1,8 @@
+<books Id="mybooks">
+  <book name="XML in a nutshell">
+  Small, nice, O'Reilly
+  </book>
+  <book name="Professional XML">
+  Big, not bad, Wrox
+  </book>
+</books>

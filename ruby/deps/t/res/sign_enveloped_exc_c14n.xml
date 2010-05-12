@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<greeting>
+<hello>foo</hello>
+<hello>bar</hello>
+<goodbye>foo</goodbye>
+<goodbye>bar</goodbye>
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#">
+<SignedInfo>
+<CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/>
+<SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"/>
+<Reference URI="">
+<Transforms>
+<Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/>
+<Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/>
+</Transforms>
+<DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
+<DigestValue>/6gSo8de1kQwW6sNa12r0juvWTU=</DigestValue>
+</Reference>
+</SignedInfo>
+<SignatureValue>LgGWGVMcQ73ovjkgaQ7mADrmKOpNKZ2zNul5OVdLBUTiWBAPRUhTZgLinQ45zjLI
+t7zaXoxRLnyS/9kXlGYc5oH0uqTDu8zHFQg34+WUDaW9dCxWucErlzwFews842Tj
+sLeetiQblOGFXxbvgDzNufG/D2LllFoyfjSIgTzFnj92BTrCJIevFblxZEa1PVno
+4FnNohO1X+UICODZDGI3YTqI0Cx3vRNSZoKCaGcYVMIX5IiH7AfTUhOmwzyg4lMV
+5JwT1yn90hIdjMaiJ8jEKzuahI/pNO+Ak54EarRDHko1t9l/u7z/6g9nUviT6fhR
+kUTfjN5GalNdfZKx0FkwNQ==</SignatureValue>
+</Signature></greeting>

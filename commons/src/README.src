@@ -1,0 +1,10 @@
+(C) Copyright 2006 VeriSign, Inc. 
+Developed by Sxip Identity
+
+This is the C++ source for the xmlsig library.  It is intended to be
+wrapped using the swig interface file in swig/xmlsig.i.
+
+Note that each language specific module builds this source with their
+own build scripts.  The local Makefile is provided for debugging
+purposes, and is not intended to be used for building the wrapper
+libraries.
