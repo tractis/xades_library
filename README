@@ -8,4 +8,6 @@ Those libraries are built over Aleksey's libxmlsec.
 
 Status
 ======
-Still in a very early stage...step by step :)
+	Ruby ->
+		XAdES BES creation allowed with many documents
+		XAdES BES validation (crypto + certificate path building + certificate path validation with CRL)
