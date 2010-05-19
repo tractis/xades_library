@@ -24,11 +24,34 @@ require 'base64'
 class XadesSignature
 
 	include XadesSigner
+	include XadesVerifier
 
-	def initialize(options)
+	def init_verify(options)
+		init_docs(options)
+		raise "Signature must be provided as :signature" if options[:signature].nil?
+		@signature = options[:signature]
+	end
+
+	def initialize(mode, options)
+		if mode == :sign 
+			init_sign(options)
+		elsif mode == :verify
+			init_verify(options)
+		else
+			raise "Unsupported mode provided, only supported :sign and verify"
+		end
+	end
+
+	def init_sign(options)
 		#We add a reference for every document to be signed
-		@enveloped_documents = options[:enveloped_documents]
+		init_docs(options)
 		@signed_attributes = validate_signed_attributes(options[:signed_attributes])
+	end
+
+	def init_docs(options)
+		#If many docs are provided and topology is attached signature will be enveloping documents
+		#Todo, add enveloped signature
+		@documents = options[:documents]
 	end
 
 	def set_pkcs12_keystore(keystore, credentials)
@@ -42,9 +65,13 @@ class XadesSignature
 		key = Xmlsig::Key.new
 		key.loadFromFile(dump_to_temp("key",@key.to_s).path,'pem','')
 
-		signature = create_signature(key, @enveloped_documents, @certificate, @signed_attributes)
+		signature = create_signature(key, @documents, @certificate, @signed_attributes)
 		#We return the string representation of the signature		
 		signature.toString()
+	end
+
+	def verify
+		verify_signature(@signature)
 	end
 
 	private 

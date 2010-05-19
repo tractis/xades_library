@@ -39,54 +39,68 @@ module XadesSigner
 	def signature_body(documents, certificate, signed_attributes)
 		body = Xmlsig::XmlDoc.new
 		       xml = <<-XML
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id='Signature'>
-  <SignedInfo>
-    <CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315" />
-    <SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"/> 
-    <Reference URI="#SignedProperties" Type='http://uri.etsi.org/01903#SignedProperties'>
-      <DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-      <DigestValue/>
-    </Reference> #{document_references(documents)}
-  </SignedInfo>
-  <SignatureValue/>
-  <KeyInfo>
-      <X509Data><X509Certificate/></X509Data>
-  </KeyInfo>
-  <Object>#{qualifiying_properties(certificate, signed_attributes)}</Object>#{document_objects(documents)}
-</Signature>
+<ds:Signature xmlns:ds="http://www.w3.org/2000/09/xmldsig#" Id='Signature'>
+<ds:SignedInfo>
+<ds:CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315" />
+<ds:SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"/>#{properties_reference}#{document_references(documents)}</ds:SignedInfo>
+<ds:SignatureValue/>
+<ds:KeyInfo>
+<ds:X509Data><ds:X509Certificate/></ds:X509Data>
+</ds:KeyInfo>
+<ds:Object>#{qualifiying_properties(certificate, signed_attributes)}</ds:Object>
+#{document_objects(documents)}</ds:Signature>
         XML
-        
 		body.loadFromString(xml.to_s)
 		body
 	end
 
+	def properties_reference
+		xml = <<-REF
+<ds:Reference URI="#SignedProperties" Type='http://uri.etsi.org/01903#SignedProperties'>
+<ds:Transforms>
+<ds:Transform Algorithm='http://www.w3.org/2001/10/xml-exc-c14n#'/>
+</ds:Transforms>
+<ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+<ds:DigestValue/>
+</ds:Reference>
+		REF
+		xml
+	end
+
 	def document_references(documents)
-		refs = []
-		documents.each_pair do |identifier,document| 
-			refs << <<-REFERENCE 
-		<Reference URI="##{identifier}">
-		      <DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
- 		      <DigestValue/>
-		</Reference>
-			REFERENCE
-		end
-		refs.join('')
+			refs = []
+			documents.each_pair do |identifier,document| 
+				refs << <<-REFERENCE 
+<ds:Reference URI="##{identifier}">
+<ds:Transforms>
+<ds:Transform Algorithm='http://www.w3.org/2001/10/xml-exc-c14n#'/>
+</ds:Transforms>
+<ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+<ds:DigestValue/>
+</ds:Reference>
+				REFERENCE
+			end
+			refs.join('')
 	end
 
 	def document_objects(documents)
 		docs = []		
 		documents.each_pair do |identifier,document| 
 			docs << <<-DOCUMENT
-<Object Id="#{identifier}">#{document}</Object>
-			DOCUMENT
+<ds:Object Id="#{identifier}">#{document}</ds:Object>
+				DOCUMENT
 		end
 		docs.join('')
 	end
 
+	def digest(content)
+		Base64.encode64(OpenSSL::Digest::SHA1.digest(content)).gsub("\n","")
+	end
+
 	def qualifiying_properties(signing_certificate, signed_attributes)
-		signing_time = Time.new.iso8601 #Time MUST be in zulu form
-		cert_digest = Base64.encode64(OpenSSL::Digest::SHA1.digest(signing_certificate.to_der)).gsub("\n","")
-		cert_issuer = signing_certificate.issuer
+		signing_time = Time.new.utc.iso8601 #Time MUST be in zulu form and timezone must be utc
+		cert_digest = digest(signing_certificate.to_der)
+		cert_issuer = signing_certificate.issuer.to_s(OpenSSL::X509::Name::RFC2253)
 		cert_serial = signing_certificate.serial
 
 		#Signed attributes provided by user
@@ -97,34 +111,35 @@ module XadesSigner
 		
 		<<-QP 
 <xades:QualifyingProperties xmlns:xades='http://uri.etsi.org/01903/v1.3.2#' Target='#Signature'>
-	<xades:SignedProperties Id='SignedProperties'>
-		<xades:SignedSignatureProperties>
-			<xades:SigningTime>#{signing_time}</xades:SigningTime>
-			<xades:SigningCertificate>
-				<xades:Cert>
-					<xades:CertDigest>
-						<ds:DigestMethod Algorithm='http://www.w3.org/2000/09/xmldsig#sha1'/>
-						<ds:DigestValue>#{cert_digest}</ds:DigestValue>
-					</xades:CertDigest>
-					<xades:IssuerSerial>
-						<ds:X509IssuerName>#{cert_issuer}</ds:X509IssuerName>
-						<ds:X509SerialNumber>#{cert_serial}</ds:X509SerialNumber>
-					</xades:IssuerSerial>
-				</xades:Cert>
-			</xades:SigningCertificate>
-			<xades:SignatureProductionPlace>
-				<xades:City>#{city}</xades:City>
-				<xades:CountryName>#{country}</xades:CountryName>
-				</xades:SignatureProductionPlace>
-		</xades:SignedSignatureProperties>
-		<xades:SignedDataObjectProperties>
-			<xades:CommitmentTypeIndication>
-				<xades:CommitmentTypeId>
-					<xades:Identifier>#{commitment_identifier}</xades:Identifier>
-				</xades:CommitmentTypeId>
-			</xades:CommitmentTypeIndication></xades:SignedDataObjectProperties>
-	</xades:SignedProperties>
-	<xades:UnsignedProperties></xades:UnsignedProperties>
+<xades:SignedProperties Id='SignedProperties'>
+<xades:SignedSignatureProperties>
+<xades:SigningTime>#{signing_time}</xades:SigningTime>
+<xades:SigningCertificate>
+<xades:Cert>
+<xades:CertDigest>
+<ds:DigestMethod Algorithm='http://www.w3.org/2000/09/xmldsig#sha1'/>
+<ds:DigestValue>#{cert_digest}</ds:DigestValue>
+</xades:CertDigest>
+<xades:IssuerSerial>
+<ds:X509IssuerName>#{cert_issuer}</ds:X509IssuerName>
+<ds:X509SerialNumber>#{cert_serial}</ds:X509SerialNumber>
+</xades:IssuerSerial>
+</xades:Cert>
+</xades:SigningCertificate>
+<xades:SignatureProductionPlace>
+<xades:City>#{city}</xades:City>
+<xades:CountryName>#{country}</xades:CountryName>
+</xades:SignatureProductionPlace>
+</xades:SignedSignatureProperties>
+<xades:SignedDataObjectProperties>
+<xades:CommitmentTypeIndication>
+<xades:CommitmentTypeId>
+<xades:Identifier>#{commitment_identifier}</xades:Identifier>
+</xades:CommitmentTypeId>
+<xades:AllSignedDataObjects/>
+</xades:CommitmentTypeIndication></xades:SignedDataObjectProperties>
+</xades:SignedProperties>
+<xades:UnsignedProperties></xades:UnsignedProperties>
 </xades:QualifyingProperties>
 		QP
 	end

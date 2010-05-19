@@ -1,0 +1,119 @@
+<ds:Signature xmlns:ds="http://www.w3.org/2000/09/xmldsig#" Id="Signature">
+<ds:SignedInfo>
+<ds:CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315"/>
+<ds:SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"/><ds:Reference URI="#SignedProperties" Type="http://uri.etsi.org/01903#SignedProperties">
+<ds:Transforms>
+<ds:Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/>
+</ds:Transforms>
+<ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
+<ds:DigestValue>qPfPSNaTb/3FbjghDoLxaaEDfqU=</ds:DigestValue>
+</ds:Reference>
+<ds:Reference URI="#Contract2">
+<ds:Transforms>
+<ds:Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/>
+</ds:Transforms>
+<ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
+<ds:DigestValue>PPn8kf2T9DQSoAv6IJsISMSKALo=</ds:DigestValue>
+</ds:Reference>
+<ds:Reference URI="#Contract3">
+<ds:Transforms>
+<ds:Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/>
+</ds:Transforms>
+<ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
+<ds:DigestValue>hqSENIsPMgr1eBd7xeOUEFp4k5Q=</ds:DigestValue>
+</ds:Reference>
+<ds:Reference URI="#Contract1">
+<ds:Transforms>
+<ds:Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/>
+</ds:Transforms>
+<ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
+<ds:DigestValue>zGn6GtMWmoBG+nny52lxbS05ZS8=</ds:DigestValue>
+</ds:Reference>
+</ds:SignedInfo>
+<ds:SignatureValue>MrVLzGH8Yg8AktjTC+ozekmP/+k4GKuQWG3lL/qEyJwNhHsajyKXwF6aMqmz0Kjy
+kRVRYN7ByTU+2UvAegG0tT91h33YADZuI/zCi/perQCKa9sOLBLg0cnBb42yt2Rz
+uZ0LTMCHewq0wXuyO/WjAHMtieYNwaqe/JFLL1HmEVs=</ds:SignatureValue>
+<ds:KeyInfo>
+<ds:X509Data>
+<X509Certificate xmlns="http://www.w3.org/2000/09/xmldsig#">MIIIDzCCBvegAwIBAgIJALsAAAAAAAABMA0GCSqGSIb3DQEBBQUAMIHgMQswCQYD
+VQQGEwJFUzEuMCwGCSqGSIb3DQEJARYfYWNfY2FtZXJmaXJtYV9jY0BjYW1lcmZp
+cm1hLmNvbTFDMEEGA1UEBxM6TWFkcmlkIChzZWUgY3VycmVudCBhZGRyZXNzIGF0
+IHd3dy5jYW1lcmZpcm1hLmNvbS9hZGRyZXNzKTESMBAGA1UEBRMJQTgyNzQzMjg3
+MRkwFwYDVQQKExBBQyBDYW1lcmZpcm1hIFNBMS0wKwYDVQQDEyRBQyBDYW1lcmZp
+cm1hIENlcnRpZmljYWRvcyBDYW1lcmFsZXMwHhcNMDcxMjEwMTUwMjA0WhcNMTIx
+MjA4MTUwMjA0WjCCAVsxCzAJBgNVBAYTAkVTMSwwKgYDVQQDFCNDZXJ0aWZpY2Fk
+byBQcnVlYmFzIFNvZnR3YXJlIFbhbGlkbzEiMCAGCSqGSIb3DQEJARYTaW5mb0Bj
+YW1lcmZpcm1hLmNvbTESMBAGA1UEBRMJMTIzNDU2NzhaMRgwFgYDVQQEFA9Tb2Z0
+d2FyZSBW4WxpZG8xHDAaBgNVBCoTE0NlcnRpZmljYWRvIFBydWViYXMxGzAZBgor
+BgEEAYGHLh4DEwtFU0E5OTk5OTk5OTEWMBQGA1UEChMNQUMgQ2FtZXJmaXJtYTEV
+MBMGA1UECxMMRGVwYXJ0YW1lbnRvMQ4wDAYDVQQMEwVDYXJnbzFSMFAGA1UEDRNJ
+Q2hhbWJlcnMgb2YgQ29tbWVyY2UgUXVhbGlmaWVkIENlcnRpZmljYXRlOiBOYXR1
+cmFsIFBlcnNvbiBDQU0tUEYtU1ctS1BTQzCBnzANBgkqhkiG9w0BAQEFAAOBjQAw
+gYkCgYEAn3J774hSvM0Iu4l1aXZsmd2L86fQIBTp3CvBFf0fPlrbQWyn6CAExPDz
+WdVrMPrsue36sGCjeuwCvBDaC/VoFjVQF4Zm4y0cFaRN191zuCTl1RDnN3UxEilv
+h4V5vZGOK0/A4JcDKuvzw0OKlS7/qEU6Z6aU/sX6MYV578R6Eg8CAwEAAaOCA9Aw
+ggPMMAwGA1UdEwEB/wQCMAAwDgYDVR0PAQH/BAQDAgO4MCkGA1UdJQQiMCAGCCsG
+AQUFBwMCBggrBgEFBQcDBAYKKwYBBAGCNxQCAjARBglghkgBhvhCAQEEBAMCBaAw
+QgYJYIZIAYb4QgEDBDUWM1VSSTpodHRwOi8vY3JsLmNhbWVyZmlybWEuY29tL2Fj
+X2NhbWVyZmlybWFfY2MuY2dpPzBGBglghkgBhvhCAQgEORY3VVJJOmh0dHA6Ly9j
+cHMuY2FtZXJmaXJtYS5jb20vY3BzL2FjX2NhbWVyZmlybWFfY2MuaHRtbDAxBglg
+hkgBhvhCAQ0EJBYiQ0VSVElGSUNBRE8gQ1VBTElGSUNBRE8gLSBSQTogQ0M5OTAd
+BgNVHQ4EFgQUE1uUj4A0WxHykYacpCrRxvDtQnQweAYIKwYBBQUHAQEEbDBqMEAG
+CCsGAQUFBzAChjRodHRwOi8vd3d3LmNhbWVyZmlybWEuY29tL2NlcnRzL2FjX2Nh
+bWVyZmlybWFfY2MuY3J0MCYGCCsGAQUFBzABhhpodHRwOi8vb2NzcC5jYW1lcmZp
+cm1hLmNvbTCBqwYDVR0jBIGjMIGggBS2H06dHGiRLjdyYOFGj1qlKjExuaGBhKSB
+gTB/MQswCQYDVQQGEwJFVTEnMCUGA1UEChMeQUMgQ2FtZXJmaXJtYSBTQSBDSUYg
+QTgyNzQzMjg3MSMwIQYDVQQLExpodHRwOi8vd3d3LmNoYW1iZXJzaWduLm9yZzEi
+MCAGA1UEAxMZQ2hhbWJlcnMgb2YgQ29tbWVyY2UgUm9vdIIBBTB2BgNVHR8EbzBt
+MDSgMqAwhi5odHRwOi8vY3JsLmNhbWVyZmlybWEuY29tL2FjX2NhbWVyZmlybWFf
+Y2MuY3JsMDWgM6Axhi9odHRwOi8vY3JsMS5jYW1lcmZpcm1hLmNvbS9hY19jYW1l
+cmZpcm1hX2NjLmNybDAqBgNVHRIEIzAhgR9hY19jYW1lcmZpcm1hX2NjQGNhbWVy
+ZmlybWEuY29tMIGSBgNVHSAEgYowgYcwgYQGDSsGAQQBgYcuCgkCAQEwczA/Bggr
+BgEFBQcCARYzaHR0cDovL2Nwcy5jYW1lcmZpcm1hLmNvbS9jcHMvYWNfY2FtZXJm
+aXJtYV9jYy5odG1sMDAGCCsGAQUFBwICMCQaIkNFUlRJRklDQURPIENVQUxJRklD
+QURPIC0gUkE6IENDOTkwLwYIKwYBBQUHAQMEIzAhMAgGBgQAjkYBATAVBgYEAI5G
+AQIwCxMDRVVSAgEAAgEBMA0GCSqGSIb3DQEBBQUAA4IBAQB+UgF+t54k2gK8Ehe1
+tz6ivqxB0Gp9GpFtw0B/j1HGyP0OlqtRrPqSS2oLJfyzUlSlYcLcWqzPRqu+5diE
+xaVcUG8ft6EcjEF614EcYhJjA5jGMSpU7S+dG+e/tO+aJf6bd/sfp1nm+TnPh0Tb
+HJPv+gTaeUlH45AGHhTakluf9R8W2nx/HXOF5qD+p/KaV0+nfDh1KPQmPR5ima/A
+JW4HvvloHdmDAPgY4EUXjuqmmsP0wXhmvVU4eXJTnhMcjlNVZoix31BYB1OhsFeo
+WsDeHbki7CZYnUST18/cW4s+MGeZ+ajAp0IJGURn9IfRFSNRREqKglHDVN28kes5
+1J0C</X509Certificate>
+</ds:X509Data>
+</ds:KeyInfo>
+<ds:Object><xades:QualifyingProperties xmlns:xades="http://uri.etsi.org/01903/v1.3.2#" Target="#Signature">
+<xades:SignedProperties Id="SignedProperties">
+<xades:SignedSignatureProperties>
+<xades:SigningTime>2010-05-19T14:16:20Z</xades:SigningTime>
+<xades:SigningCertificate>
+<xades:Cert>
+<xades:CertDigest>
+<ds:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
+<ds:DigestValue>jFdkE33pJa7lmBO1T7Wjtn1nyAE=</ds:DigestValue>
+</xades:CertDigest>
+<xades:IssuerSerial>
+<ds:X509IssuerName>CN=AC Camerfirma Certificados Camerales,O=AC Camerfirma SA,serialNumber=A82743287,L=Madrid (see current address at www.camerfirma.com/address),emailAddress=ac_camerfirma_cc@camerfirma.com,C=ES</ds:X509IssuerName>
+<ds:X509SerialNumber>13474770085092524033</ds:X509SerialNumber>
+</xades:IssuerSerial>
+</xades:Cert>
+</xades:SigningCertificate>
+<xades:SignatureProductionPlace>
+<xades:City>Barcelona</xades:City>
+<xades:CountryName>SP</xades:CountryName>
+</xades:SignatureProductionPlace>
+</xades:SignedSignatureProperties>
+<xades:SignedDataObjectProperties>
+<xades:CommitmentTypeIndication>
+<xades:CommitmentTypeId>
+<xades:Identifier>http://github.com/tractis/xades_library/commitments#signContract</xades:Identifier>
+</xades:CommitmentTypeId>
+<xades:AllSignedDataObjects/>
+</xades:CommitmentTypeIndication></xades:SignedDataObjectProperties>
+</xades:SignedProperties>
+<xades:UnsignedProperties/>
+</xades:QualifyingProperties>
+</ds:Object>
+<ds:Object Id="Contract2"><b/></ds:Object>
+<ds:Object Id="Contract3"><c/></ds:Object>
+<ds:Object Id="Contract1"><a xmlns="http://a.b.com">Included new info to make it fail</a></ds:Object>
+</ds:Signature>
