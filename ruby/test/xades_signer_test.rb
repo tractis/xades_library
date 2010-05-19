@@ -32,7 +32,7 @@ class XadesSignerTest < Test::Unit::TestCase
 	end
 
 	def initialize_default_pkcs12_store
-		@signature.set_pkcs12_keystore("/home/dave/demo.p12","1111")	
+		@signature.set_pkcs12_keystore(File.dirname(__FILE__) + "/fixtures/demo.p12","1111")	
 	end
 
 	def default_signed_documents
